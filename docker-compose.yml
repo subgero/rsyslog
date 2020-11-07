@@ -7,7 +7,7 @@ services:
     container_name: syslog 
     restart: always
     volumes: 
-      - "/var/log/forti:/var/log" 
+      - "/mnt/kingo-database/forti:/var/log" 
     ports: 
       - 514:514
       - 514:514/udp
