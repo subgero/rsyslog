@@ -1,0 +1,15 @@
+version: "3.7"
+services: 
+
+  syslogserver: 
+    image: syslog 
+    hostname: syslog 
+    container_name: syslog 
+    restart: always
+    volumes: 
+      - "/var/log/forti:/var/log" 
+    ports: 
+      - 514:514
+      - 514:514/udp
+    cap_add:
+      - SYSLOG
